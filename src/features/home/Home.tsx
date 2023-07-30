@@ -83,7 +83,8 @@ export const Home = () => {
         </SizableText>{' '}
         styles are not applied on{' '}
         <SizableText color={'$colorHover'} theme={'yellow'}>
-          Android
+          Android. Might be related:
+          https://github.com/facebook/react-native/pull/36656
         </SizableText>
       </SizableText>
     </ScrollView>
