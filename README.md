@@ -22,13 +22,13 @@
 
   [Development build][1] (recommended)
 
-   >  Run `yarn ios` or `yarn android` to create the development builds. After that, when you can also use `i` or `a` to run your app from the Metro Bundler terminal to run your app, without creating the development builds again. Rerunning the app is usually necessary when something changes on the native side.
+   >  Run `yarn ios` or `yarn android` to create the development builds. After that, when you can also use `i` or `a` to run your app from the Metro Bundler terminal, without creating the development builds again. Rerunning the app is usually necessary when something changes on the native side.
 
   <br> 
 
   [Expo Go][25]
 
-  >  Press 's' to switch to Expo Go. Then you can use `i` or 'a' to run the app on iOS or Android respectively.
+  >  Press 's' to switch to Expo Go. Then you can use `i` or `a` to run the app on iOS or Android respectively.
 
    <img width="569" alt="image" src="https://github.com/LunatiqueCoder/gigburn/assets/55203625/9d50ce69-d87e-4882-8c0b-ac4f910a41d1">
 
@@ -46,7 +46,16 @@
 
 </details>
 
+<details><summary>  ⚠️   <b>Both</b></summary>
+   
 <br>
+   
+ If you are targeting both web and mobile with Expo only (no Next.js), be sure to start two metro bundlers on different ports: one for native (8081) and another one for web (8082).
+
+ <img width="571" alt="image" src="https://tamagui.dev/metro-bundler-ports.png">
+
+
+</details>
 
 [1]: https://docs.expo.dev/develop/development-builds/introduction/
 [6]: https://redux-toolkit.js.org/
