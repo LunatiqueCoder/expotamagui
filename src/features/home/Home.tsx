@@ -71,7 +71,7 @@ export const Home = () => {
         <SizableText color={'$colorHover'} theme={'yellow'}>
           {"import '@tamagui/core/reset.css'"}
         </SizableText>{' '}
-        doesn't do anything. The following input should not have hover styles on
+        doesn't do anything. The following input should not have focus styles on
         the web:
       </SizableText>
       <Input />
