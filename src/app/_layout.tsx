@@ -1,4 +1,4 @@
-import '@tamagui/core/reset.css';
+// import '@tamagui/core/reset.css';
 import {Stack} from 'expo-router';
 import {tamaguiFonts} from 'src/tamagui-config/tamaguiFonts';
 import {useFonts} from 'expo-font';

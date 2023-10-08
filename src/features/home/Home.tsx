@@ -36,18 +36,19 @@ export const Home = () => {
           Expo + Tamagui bugs
         </H1>
       </YStack>
-      <H2>1. Expo CSS does not work well with Tamagui: </H2>
+
+      <H2>1. CSS classes are not working with Tamagui: </H2>
       <Separator padding={10} theme={'blue'} />
       <SizableText>
         Tamagui{' '}
         <SizableText color={'$colorHover'} theme={'yellow'}>
-          {'<Button />'}
+          {'<Button />'} (first button)
         </SizableText>{' '}
-        should have the styles reset and also{' '}
+        should have the{' '}
         <SizableText color={'$colorHover'} theme={'yellow'}>
           myButton
         </SizableText>{' '}
-        styles applied
+        styles applied, just like the simple React Native button (second button)
       </SizableText>
       <YStack maxWidth={400} space={'$4'} mt={30}>
         <Button style={cns(styles.myButton)} theme={'blue'}>
@@ -61,31 +62,27 @@ export const Home = () => {
           <Text>React Native button with CSS</Text>
         </Pressable>
       </YStack>
-      <H2 paddingTop={50}>2. (Native only) Tamagui Input </H2>
+
+      <H2 paddingTop={50}> 2. Resetting Tamagui CSS does not work: </H2>
+
       <Separator padding={10} theme={'blue'} />
+
       <SizableText>
         <SizableText color={'$colorHover'} theme={'yellow'}>
-          {'<Input />'}
+          {"import '@tamagui/core/reset.css'"}
         </SizableText>{' '}
-        can't be disabled.{' '}
-        <SizableText color={'$colorHover'} theme={'yellow'}>
-          {'focusable={false}'}
-        </SizableText>{' '}
-        does not work either
+        doesn't do anything. The following input should not have hover styles on
+        the web:
       </SizableText>
-      <Input disabled={true} focusable={false} />
+      <Input />
 
-      <H2 paddingTop={50}>3. (Android only) SizableText styles not applied </H2>
+      <H2 paddingTop={50}>3. (Native only) SizableText styles not applied </H2>
       <Separator padding={10} theme={'blue'} />
       <SizableText>
         <SizableText color={'$colorHover'} theme={'yellow'}>
           {'<SizableText />'}
         </SizableText>{' '}
-        styles are not applied on{' '}
-        <SizableText color={'$colorHover'} theme={'yellow'}>
-          Android. Might be related:
-          https://github.com/facebook/react-native/pull/36656
-        </SizableText>
+        styles are not applied
       </SizableText>
     </ScrollView>
   );
